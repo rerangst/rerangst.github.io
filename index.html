@@ -13,8 +13,8 @@
         height: 500px;
       }
     </style>
-    <script type="module" crossorigin src="/assets/main.c7dd777f.js"></script>
-    <link rel="modulepreload" href="/assets/vendor.2c9267fc.js">
+    <script type="module" crossorigin src="/assets/main.470e4879.js"></script>
+    <link rel="modulepreload" href="/assets/vendor.09e853de.js">
     <link rel="stylesheet" href="/assets/main.74cc416d.css">
   </head>
   <body>
@@ -24,25 +24,36 @@
       <div id="popup-content"></div>
     </div>
     <div id = "control">
-      <div id="speed-control">
+      
+      <div id="speed-control">        
         <label for="segments">Show base route:&nbsp;</label>
-        <input type="checkbox" id="segments" />
+        <input type="checkbox" id="segments" checked />
         <label for="speed">
           speed:&nbsp;
           <input
-            id="speed"
-            type="range"
-            min="10"
-            max="500"
-            step="10"
-            value="60"
+          id="speed"
+          type="range"
+          min="10"
+          max="500"
+          step="10"
+          value="150"
           />
         </label>
         <button id="start-animation">Start</button>
-        
+        <button id="tick">Tick</button>
+        <br>
+
       </div>
     </div>
-    <div id="timeline"></div>
+    <div>
+      <div>
+        <input type="checkbox" id="showTimeLine" />
+        <label for="showTimeLine"  style=" margin-left: 0px" >Show Timeline of:&nbsp;</label>
+        <!-- <label for="obj">Timeline of :&nbsp;</label> -->
+        <select id="timeLineObj" disabled=true></select>
+      </div>
+      <div id="timeline" hidden=true></div>
+    </div>
     
   </body>
 </html>
